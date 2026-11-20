@@ -102,7 +102,7 @@ export default function LearningCompetencies() {
                   { label: 'Subject',     value: 'Mathematics' },
                   { label: 'Grade Level', value: 'Grade 7' },
                   { label: 'Topic',       value: 'Sets and Venn Diagrams' },
-                  { label: 'Quarter',     value: 'Second Quarter (Revised K–10 Curriculum)' },
+                  { label: 'Quarter',     value: 'Second Quarter' },
                 ].map(({ label, value }) => (
                   <div key={label} className="rounded-xl bg-white/10 px-3 py-2">
                     <p className="text-xs font-semibold uppercase tracking-wide text-indigo-200">{label}</p>
