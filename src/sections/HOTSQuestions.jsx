@@ -36,7 +36,7 @@ export default function HOTSQuestions() {
 
             {/* Header */}
             <div className="mb-10">
-              <div className="mb-3 flex items-center gap-2 text-rose-600">
+              <div className="mb-3 flex items-center gap-2 text-stone-700">
                 <Brain size={19} />
                 <span className="text-sm font-semibold uppercase tracking-widest">Learning Activities</span>
               </div>
@@ -50,7 +50,7 @@ export default function HOTSQuestions() {
               {questions.map((item) => (
                 <li key={item.number} className="rounded-2xl border border-slate-200 bg-slate-50 p-6">
                   <div className="flex items-start gap-4">
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose-600 text-sm font-bold text-white">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-stone-700 text-sm font-bold text-white">
                       {item.number}
                     </span>
                     <div className="flex-1">

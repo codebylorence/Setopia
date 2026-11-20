@@ -5,7 +5,7 @@ import { ChevronDown, Zap } from 'lucide-react'
 const links = [
   { path: '/independent-practices', label: "LET'S THINK!",         color: 'text-indigo-600',  bg: 'bg-indigo-50',  active: 'bg-indigo-100 text-indigo-700',   badge: 'bg-indigo-600 text-white'  },
   { path: '/real-life-scenarios',   label: 'CHALLENGE YOUR MIND!', color: 'text-emerald-600', bg: 'bg-emerald-50', active: 'bg-emerald-100 text-emerald-700', badge: 'bg-emerald-600 text-white' },
-  { path: '/hots-questions',        label: 'MATH DETECTIVE',       color: 'text-rose-600',    bg: 'bg-rose-50',    active: 'bg-rose-100 text-rose-700',       badge: 'bg-rose-600 text-white'    },
+  { path: '/hots-questions',        label: 'MATH DETECTIVE',       color: 'text-stone-700',   bg: 'bg-stone-100',  active: 'bg-stone-200 text-stone-800',     badge: 'bg-stone-700 text-white'    },
   { path: '/create-your-own-set',   label: 'CREATE YOUR OWN SET!', color: 'text-violet-600',  bg: 'bg-violet-50',  active: 'bg-violet-100 text-violet-700',   badge: 'bg-violet-600 text-white'  },
 ]
 

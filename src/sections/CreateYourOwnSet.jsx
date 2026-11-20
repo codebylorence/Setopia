@@ -13,7 +13,7 @@ const tasks = [
     number: 2,
     label: 'Not Well-Defined Collection',
     instruction: 'Think of one collection from your surroundings that is NOT well-defined. Write it and explain why it cannot be clearly determined.',
-    color: 'rose',
+    color: 'amber',
   },
   {
     number: 3,
@@ -25,7 +25,7 @@ const tasks = [
 
 const colorMap = {
   indigo:  { badge: 'bg-indigo-600 text-white',  border: 'border-indigo-200',  bg: 'bg-indigo-50',  label: 'text-indigo-700'  },
-  rose:    { badge: 'bg-rose-600 text-white',    border: 'border-rose-200',    bg: 'bg-rose-50',    label: 'text-rose-700'    },
+  amber:   { badge: 'bg-amber-500 text-white',   border: 'border-amber-200',   bg: 'bg-amber-50',   label: 'text-amber-700'   },
   emerald: { badge: 'bg-emerald-600 text-white', border: 'border-emerald-200', bg: 'bg-emerald-50', label: 'text-emerald-700' },
 }
 
