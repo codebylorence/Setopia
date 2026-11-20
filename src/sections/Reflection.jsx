@@ -120,6 +120,19 @@ export default function Reflection() {
                   </p>
                 </div>
 
+                {/* Classroom code instruction */}
+                <div className="w-full max-w-sm rounded-2xl border border-pink-200 bg-white p-5 text-left">
+                  <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-pink-500">How to Join</p>
+                  <ol className="mt-2 flex flex-col gap-1.5 text-sm text-slate-700">
+                    <li><span className="font-semibold text-pink-600">1.</span> Open Google Classroom.</li>
+                    <li><span className="font-semibold text-pink-600">2.</span> Click the <span className="font-semibold">+</span> button and choose <span className="font-semibold">Join class</span>.</li>
+                    <li><span className="font-semibold text-pink-600">3.</span> Enter the classroom code:</li>
+                  </ol>
+                  <div className="mt-3 flex items-center justify-center rounded-xl bg-pink-50 px-4 py-3">
+                    <span className="font-mono text-2xl font-bold tracking-widest text-pink-700">2p6kglm5</span>
+                  </div>
+                </div>
+
                 <a
                   href={REFLECTION_URL}
                   target="_blank"
