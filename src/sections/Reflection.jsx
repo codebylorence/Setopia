@@ -1,12 +1,11 @@
 import { useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
-import { BookHeart, ArrowRight, CheckCircle2, LockKeyhole, PlayCircle } from 'lucide-react'
+import { BookHeart, ArrowRight, CheckCircle2, ExternalLink, LockKeyhole } from 'lucide-react'
 import Navbar from '../components/Navbar'
 import LessonSidebar, { lessons } from '../components/LessonSidebar'
-import IframeModal from '../components/IframeModal'
 
 // ── Replace this URL with the real Reflection form/activity link ─────────────
-const REFLECTION_URL = 'https://classroom.google.com/c/OTAwNTEwODQwMTE5/p/OTAwNTEwOTMxMDY3/details'
+const REFLECTION_URL = 'https://classroom.google.com/c/OTAwNTEwODQwMTE5'
 
 const STORAGE_KEY = 'learnspace-progress-v1'
 
@@ -34,22 +33,23 @@ function markReflectionDone() {
 }
 
 export default function Reflection() {
-  const navigate = useNavigate()
-  const progress = loadProgress()
+  const navigate  = useNavigate()
+  const progress  = loadProgress()
 
   const allLessonsCompleted = progress.completedLessons.length >= lessons.length
-
-  const [open, setOpen]           = useState(false)
   const [submitted, setSubmitted] = useState(progress.reflectionCompleted)
 
   if (!progress.diagnosticCompleted) {
     return <Navigate to="/lessons/1" replace />
   }
 
+  const handleOpen = () => {
+    window.open(REFLECTION_URL, '_blank', 'noopener,noreferrer')
+  }
+
   const handleDone = () => {
     markReflectionDone()
     setSubmitted(true)
-    setOpen(false)
   }
 
   return (
@@ -66,9 +66,7 @@ export default function Reflection() {
             <div className="mb-10">
               <div className="mb-3 flex items-center gap-2 text-pink-500">
                 <BookHeart size={19} />
-                <span className="text-sm font-semibold uppercase tracking-widest">
-                  Reflection
-                </span>
+                <span className="text-sm font-semibold uppercase tracking-widest">Reflection</span>
               </div>
               <h1 className="text-3xl font-bold md:text-4xl">Learning Reflection</h1>
               <p className="mt-4 leading-7 text-slate-500">
@@ -77,7 +75,7 @@ export default function Reflection() {
               </p>
             </div>
 
-            {/* ── Locked ── */}
+            {/* Locked */}
             {!allLessonsCompleted && !submitted && (
               <div className="flex min-h-[40vh] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-slate-200 bg-slate-50 py-20 text-center">
                 <LockKeyhole size={40} className="mb-4 text-slate-400" />
@@ -88,7 +86,7 @@ export default function Reflection() {
               </div>
             )}
 
-            {/* ── Already submitted ── */}
+            {/* Already submitted */}
             {submitted && (
               <div className="flex flex-col items-center justify-center rounded-2xl border-2 border-green-200 bg-green-50 py-16 text-center">
                 <CheckCircle2 size={48} className="mb-4 text-green-500" />
@@ -106,7 +104,7 @@ export default function Reflection() {
               </div>
             )}
 
-            {/* ── Unlocked, not yet submitted ── */}
+            {/* Unlocked, not yet submitted */}
             {allLessonsCompleted && !submitted && (
               <div className="flex flex-col items-center justify-center gap-6 rounded-2xl border-2 border-pink-200 bg-pink-50 px-8 py-16 text-center">
                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-pink-100">
@@ -116,20 +114,22 @@ export default function Reflection() {
                 <div>
                   <h2 className="text-xl font-bold text-pink-800">Reflection Activity</h2>
                   <p className="mt-2 max-w-sm text-sm text-pink-700">
-                    Answer a few short reflection prompts about your learning journey. Once you finish and submit the form, click <span className="font-semibold">Mark as Done</span> to unlock the Final Quiz.
+                    Answer a few short reflection prompts about your learning journey. The form will
+                    open in a new tab. Once you finish and submit it, come back here and click
+                    <span className="font-semibold"> Mark as Done</span> to unlock the Final Quiz.
                   </p>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={() => setOpen(true)}
+                <a
+                  href={REFLECTION_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl bg-pink-500 px-8 py-3 font-semibold text-white shadow-sm transition hover:bg-pink-600 active:scale-95"
                 >
-                  <PlayCircle size={20} />
+                  <ExternalLink size={20} />
                   Open Reflection Form
-                </button>
+                </a>
 
-                {/* Mark as done — appears after they open the modal at least once */}
                 <button
                   type="button"
                   onClick={handleDone}
@@ -144,13 +144,6 @@ export default function Reflection() {
           </div>
         </main>
       </div>
-
-      <IframeModal
-        isOpen={open}
-        onClose={() => setOpen(false)}
-        url={REFLECTION_URL}
-        title="Learning Reflection"
-      />
     </div>
   )
 }
