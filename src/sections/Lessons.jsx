@@ -900,7 +900,7 @@ export default function Lessons() {
                 {currentLesson.id === lessons.length && isCompleted && (
                   <div className="mt-8 rounded-2xl border border-green-200 bg-green-50 p-8 text-center">
                     <Trophy size={40} className="mx-auto mb-4 text-green-600" />
-                    <h2 className="text-2xl font-bold">All Lessons Completed!</h2>
+                    <h2 className="text-2xl font-bold">Great job, Math Explorer!</h2>
                     <p className="mt-3 text-slate-600">
                       You have finished all ten lessons on Sets and Venn Diagrams.
                     </p>
