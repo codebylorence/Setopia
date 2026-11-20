@@ -4,11 +4,17 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import LandingPage from './pages/LandingPage'
 import Home from './sections/Home'
+import CreateYourOwnSet from './sections/CreateYourOwnSet'
 import FinalQuiz from './sections/FinalQuiz'
 import Help from './sections/Help'
+import HOTSQuestions from './sections/HOTSQuestions'
+import IndependentPractices from './sections/IndependentPractices'
+import LearningCompetencies from './sections/LearningCompetencies'
 import Lessons from './sections/Lessons'
 import Motivation from './sections/Motivation'
 import Objective from './sections/Objective'
+import PerformanceTask from './sections/PerformanceTask'
+import RealLifeScenarios from './sections/RealLifeScenarios'
 import Reflection from './sections/Reflection'
 import TermsDefinitions from './sections/TermsDefinitions'
 
@@ -30,6 +36,12 @@ function App() {
         />
 
         <Route path="/terms" element={<TermsDefinitions />} />
+        <Route path="/learning-competencies" element={<LearningCompetencies />} />
+        <Route path="/independent-practices" element={<IndependentPractices />} />
+        <Route path="/real-life-scenarios" element={<RealLifeScenarios />} />
+        <Route path="/performance-task" element={<PerformanceTask />} />
+        <Route path="/hots-questions" element={<HOTSQuestions />} />
+        <Route path="/create-your-own-set" element={<CreateYourOwnSet />} />
         <Route path="/objective" element={<Objective />} />
         <Route path="/motivation" element={<Motivation />} />
         <Route path="/reflection" element={<Reflection />} />

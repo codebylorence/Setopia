@@ -94,7 +94,7 @@ export default function LandingPage() {
         {/* Content */}
         <div className="relative z-10 mx-auto max-w-3xl">
           <span className="inline-block rounded-full bg-white/70 px-4 py-2 text-xs font-semibold tracking-widest text-indigo-700 shadow-sm backdrop-blur-sm">
-            WELCOME TO LEARNSPACE
+            WELCOME TO SETOPIA
           </span>
 
           <h1 className="mt-8 text-4xl font-bold leading-tight tracking-tight md:text-6xl">

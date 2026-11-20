@@ -33,6 +33,10 @@ const categories = [
         definition: 'A way of describing a set by stating the common property or condition that its elements must satisfy.',
       },
       {
+        term: '| (such that)',
+        definition: 'The symbol | means "such that." It is used in set-builder form to separate the variable from the condition, e.g., {x | x is an even number}.',
+      },
+      {
         term: 'Finite Set',
         definition: 'A set that contains a limited number of elements.',
       },

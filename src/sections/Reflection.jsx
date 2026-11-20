@@ -6,7 +6,7 @@ import LessonSidebar, { lessons } from '../components/LessonSidebar'
 import IframeModal from '../components/IframeModal'
 
 // ── Replace this URL with the real Reflection form/activity link ─────────────
-const REFLECTION_URL = 'https://padlet.com/lorencerodriguezdev/my-phenomenal-padlet-s025lw2tgyztqfsjyouv'
+const REFLECTION_URL = 'https://classroom.google.com/c/OTAwNTEwODQwMTE5/p/OTAwNTEwOTMxMDY3/details'
 
 const STORAGE_KEY = 'learnspace-progress-v1'
 

@@ -23,17 +23,17 @@ const learningSteps = [
   },
   {
     number: '02',
-    icon: BookOpen,
-    title: 'Review Key Terms',
-    description:
-      'Visit Terms and Definitions to familiarize yourself with important mathematical words and symbols.',
-  },
-  {
-    number: '03',
     icon: ClipboardList,
     title: 'Take the Diagnostic Test',
     description:
       'Answer the diagnostic test to assess your prior knowledge before starting the lessons.',
+  },
+  {
+    number: '03',
+    icon: BookOpen,
+    title: 'Review Key Terms',
+    description:
+      'Visit Terms and Definitions to familiarize yourself with important mathematical words and symbols.',
   },
   {
     number: '04',

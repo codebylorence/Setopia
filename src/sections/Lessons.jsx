@@ -93,7 +93,7 @@ const practiceImages = {
     new URL('../assets/practice/lesson9.practice.1.jpg', import.meta.url).href,
     new URL('../assets/practice/lesson9.practice.2.jpg', import.meta.url).href,
   ],
-  10: [],
+  10: [new URL('../assets/practice/lesson10.practice.jpg', import.meta.url).href],
 }
 
 // ── Diagnostic test questions ─────────────────────────────────────────────────
@@ -287,7 +287,28 @@ const practiceQuestions = {
       { label: 'Outside both A and B',              answers: ['{7, 8}', '{7,8}', '7, 8'] },
     ],
   },
-  10: null,
+  10: {
+    question: 'In a class of 50 students, 30 like Filipino, 25 like English, and some like both. Use the data to answer the following questions.',
+    parts: [
+      {
+        label: '1. How many students like Filipino or English?',
+        answers: ['33', '33 students'],
+      },
+      {
+        label: '2. What formula should be used?',
+        answers: [
+          'n(a∪b) = n(a) + n(b) - n(a∩b)',
+          'n(ab) = n(a) + n(b) - n(ab)',
+          'n(a∪b)=n(a)+n(b)-n(a∩b)',
+          'n(ab)=n(a)+n(b)-n(ab)',
+        ],
+      },
+      {
+        label: '3. How many students like neither of the subjects?',
+        answers: ['10', '10 students'],
+      },
+    ],
+  },
 }
 
 // ── Storage ───────────────────────────────────────────────────────────────────
@@ -691,7 +712,6 @@ export default function Lessons() {
                   </div>
                 </section>
 
-                {/* Guided Practice — only shown when the lesson has practice questions */}
                 {currentPractice ? (
                 <section className="rounded-2xl border border-indigo-100 bg-indigo-50/40 p-6 md:p-8">
                   <div className="mb-5 flex items-center gap-3">
@@ -874,31 +894,7 @@ export default function Lessons() {
                     </div>
                   )}
                 </section>
-                ) : (
-                /* ── Lesson 10: no guided practice — "Finish Lesson" button ── */
-                <section className="rounded-2xl border border-green-100 bg-green-50/40 p-6 md:p-8 text-center">
-                  <CheckCircle2 size={36} className="mx-auto mb-4 text-green-500" />
-                  <h2 className="text-xl font-bold text-green-800">You've reached the end of this lesson!</h2>
-                  <p className="mt-2 text-sm text-slate-500">
-                    Click below to mark this lesson complete and unlock the Reflection activity.
-                  </p>
-                  {!isCompleted ? (
-                    <button
-                      type="button"
-                      onClick={markComplete}
-                      className="mt-6 inline-flex items-center gap-2 rounded-xl bg-green-600 px-7 py-3 font-semibold text-white transition hover:bg-green-700"
-                    >
-                      Finish Lesson
-                      <ArrowRight size={18} />
-                    </button>
-                  ) : (
-                    <div className="mt-6 inline-flex items-center gap-2 rounded-xl border border-green-300 bg-green-100 px-6 py-3 text-sm font-semibold text-green-700">
-                      <CheckCircle2 size={18} />
-                      Lesson Completed
-                    </div>
-                  )}
-                </section>
-                )}
+                ) : null}
 
                 {/* Course completion */}
                 {currentLesson.id === lessons.length && isCompleted && (
