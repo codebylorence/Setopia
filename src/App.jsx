@@ -16,6 +16,7 @@ import Objective from './sections/Objective'
 import PerformanceTask from './sections/PerformanceTask'
 import RealLifeScenarios from './sections/RealLifeScenarios'
 import Reflection from './sections/Reflection'
+import Resources from './sections/Resources'
 import TermsDefinitions from './sections/TermsDefinitions'
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
         <Route path="/motivation" element={<Motivation />} />
         <Route path="/reflection" element={<Reflection />} />
         <Route path="/final-quiz" element={<FinalQuiz />} />
+        <Route path="/resources" element={<Resources />} />
         <Route path="/help" element={<Help />} />
 
 
