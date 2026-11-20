@@ -48,9 +48,12 @@ export default function Navbar() {
         <Link
           to="/home"
           onClick={() => setIsOpen(false)}
-          className="shrink-0 text-2xl font-bold tracking-tight text-indigo-600"
+          className="flex shrink-0 items-center gap-2"
         >
-          Setopia<span className="text-slate-800">.</span>
+          <img src="/setopia-logo.png" alt="Setopia logo" className="h-9 w-9 rounded-lg object-cover" />
+          <span className="text-2xl font-bold tracking-tight text-indigo-600">
+            Setopia<span className="text-slate-800">.</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}

@@ -63,7 +63,7 @@ export default function CreateYourOwnSet() {
                       <h2 className={`text-base font-bold ${c.label}`}>{task.label}</h2>
                     </div>
                     <p className="mb-5 text-sm leading-7 text-slate-700">{task.instruction}</p>
-                    <div className="rounded-xl border border-dashed border-slate-300 bg-white p-4 min-h-[80px]">
+                    <div className="rounded-xl border border-dashed border-slate-300 bg-white p-4 min-h-20">
                     </div>
                   </div>
                 )
